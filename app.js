@@ -391,7 +391,7 @@ function convertResultsFC(responseJson) {
 }
 
 function displayResultsFC(result) {
-    $('main').empty().append(`<div id="currentUV"> ${city}: Tomorrow's UV Index</div>
+    $('main').empty().append(`
     <div id="forecastPage">
         <img id="forecastImage" class="mainPic" src="beach.png" alt="umbrella">
         <h2 id="forecastHeadline">Your UV Forecast for tomorrow in <span>${city}</span></h2>
