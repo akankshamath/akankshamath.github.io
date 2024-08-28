@@ -1,0 +1,741 @@
+* 
+  body {
+    font-family: Karla, sans-serif; 
+    background: #ffffe0;
+    margin: 0;
+  }
+
+  header {
+    text-align: center; /* Center the text */
+    margin-top: 20px; /* Push the header down */
+    }
+        h1 {
+    font-family: 'Karla', sans-serif; /* Change the font to Karla */
+    font-weight: 600; /* Set font weight */
+    color: #a51212; /* Set the color to green */
+    font-size: 36px; /* Set the font size */
+    margin: 50px 0;
+    }
+
+    nav {
+        position: fixed;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        top: 0;
+        left: 5%;
+        right: 0;
+        z-index: 10;
+        width: 100%;
+        height: 80px;
+    }
+    
+    #navList {
+        display: none;
+        list-style: none;
+        text-decoration: none;
+        margin-top: 95px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: space-between;
+        margin: 0px;
+        padding: 12px 12px 12px 12px;
+        font-size: 26px;
+      }
+      
+      #navList li {
+        padding: 20px 20px 20px 0px;
+      }
+
+      #navList a {
+        color: #a51212; 
+        text-decoration: none; 
+        font-weight: bold;
+    }
+    
+    #navList a:hover {
+        text-decoration: underline; /* Optional: add underline on hover */
+    }
+    
+  .sun-image {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distributes space evenly between items */
+    width: 150px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    display: inline-block; /* Keep them inline with other content */
+    margin: 10px; /* Add some space around the images */
+}
+
+/* Specific styles for each sun image */
+.sun1 {
+    position: absolute;
+    left: 300px;
+    top: 150px;
+    transform: rotate(0deg); /* No rotation, but you can add effects */
+}
+
+.sun2 {
+    position: absolute;
+    right: 300px;
+    top: 150px;
+    transform: rotate(45deg); /* Rotate the second image by 45 degrees */
+}
+  
+  main {
+    margin-top: 130px;
+}
+
+/* Container for form elements */
+#js-form {
+  width: 100%;
+  max-width: 800px; /* Control overall width */
+  margin: 0 auto; /* Center the form horizontally */
+}
+
+/* Input field */
+input#js-location-input {
+  display: block;
+  width: 100%; /* Full width of parent container */
+  height: 90px;
+  padding: 10px;
+  border-radius: 4px;
+  font-family: 'Karla', sans-serif;
+  background-color: white;
+  border: 5px solid #fdd956;
+  box-sizing: border-box; /* Include padding and border in the element's total width */
+  margin-bottom: 20px; /* Add margin to separate from the button */
+}
+
+/* Submit button */
+input.uvButton {
+  display: block;
+  width: 100%; /* Full width of parent container */
+  padding: 20px; /* Ensure consistent padding */
+  height: 70px; /* Match the height of the input field */
+  border-radius: 4px;
+  background-color: #fdd956;
+  border: 5px solid #fdd956;
+  font-family: 'Karla', sans-serif;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; /* Include padding and border in the element's total width */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+
+input.uvButton:hover {
+    border: none;
+    background-color: lightblue; /* Darker green on hover */
+    transform: translateY(-2px); /* Slightly lift the button on hover */
+}
+
+input.uvButton:active {
+    border: none;
+    background-color: lightblue; /* Even darker green on click */
+    transform: translateY(0); /* Remove the lift effect on click */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Reduce shadow on click */
+}
+  
+  .startPage {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    color: #333;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 64px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  form {
+    width: 80%;
+    height: 50px;
+    margin: auto;
+  }
+  
+  input {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    border: 3px solid lightblue;
+    font-size: 16px;
+    padding: 5px;
+  }
+  
+  label {
+    font-size: 18px;
+    display: block;
+    margin: 20px auto;
+  }
+  
+  .button, input:hover {
+    cursor: pointer;
+    border: none;
+    background-color: lightblue; /* Darker green on hover */
+    transform: translateY(-2px);
+  }
+
+  .button, input:active {
+    border: none;
+    background-color: lightblue; /* Even darker green on click */
+    transform: translateY(0); /* Remove the lift effect on click */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .button {
+    margin: 10px auto;
+    width: 80%;
+    border-radius: 4px;
+    background-color: #fdd956;
+    border: 5px solid #fdd956;
+
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 20px;
+    position: absolute;
+    bottom: 12px;
+    left: 40px;
+    font-weight: bold;
+  }
+
+  .uvResult {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+h2 {
+    font-weight: bolder;
+    text-align: center;
+    font-size: 28px;
+}
+
+#results-UV span {
+    font-weight: bolder;
+    color: #000000;
+    display: block;
+    text-transform: uppercase;
+}
+
+.uv-container {
+  display: flex;
+  flex-direction: row-reverse; /* Elements side by side */
+  justify-content: space-between; /* Spread the image and sidebar apart */
+  align-items: center; /* Center the content vertically */
+  width: 100%; /* Full width of the container */
+  margin-top: 20px;
+  gap: 20px; /* Space between image and sidebar */
+}
+
+.uv-image-container {
+  flex: 1; /* Adjust based on content size */
+  max-width: 35%; /* Image container takes up about 35% of the container */
+}
+
+
+.uv-image {
+  margin-left: 5%;
+  max-width: 100%; /* Make the image responsive */
+  height: auto;
+}
+
+.uv-sidebar {
+  flex: 1.5; /* Sidebar takes up the remaining space */
+  max-width: 50%; /* Ensure it takes slightly less than half the page */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align content at the start */
+  margin-right: 5%; /* Space on the right side */
+  position: relative;
+}
+
+.resultsDesc {
+  position: relative;
+    margin-right: 5%;
+    margin-top: 10px; /* Add some spacing from the sidebar */
+    font-family: 'Karla', sans-serif;
+    font-size: 2.5em;
+    top: 0;
+
+}
+
+.uv-bar {
+  font-family: 'Karla', sans-serif;
+  text-align: center;
+  margin-bottom: 2px;
+  left:10%;
+  margin-right: 5%;
+  height: 50px;
+  width: 100%; /* Make sure the bars fill the available space */
+  font-weight: bold;
+  padding-top: 3px;
+  font-size: 2em;
+}
+
+.extreme { background-color: #855ed9; }
+.very-high { background-color: #ea3500; }
+.high { background-color: #ffc100; }
+.moderate { background-color: #fff68c; }
+.low { background-color: #83cd6e; }
+
+
+
+.uv-index-text,
+.uv-index-value {
+    position: absolute; 
+    width: 100%;
+    text-align: center;
+    color: #000;
+    z-index: 2;
+    left: 50%; /* Centers the text horizontally */
+    transform: translateX(-50%); /* Ensures horizontal centering */
+}
+
+.uv-index-text {
+  left: 19.5%;
+    top: 70%; /* Adjust the vertical position as needed */
+    font-family: 'Karla', sans-serif;
+    font-weight: 600;
+    font-size: 2em; /* Adjust font size as needed */
+    margin-bottom: 10px; 
+}
+
+.uv-index-value {
+  left: 20%;
+    top: 70%; /* Position this slightly below the text */
+    font-family: 'Karla', sans-serif;
+    font-weight: bold;
+    font-size: 2.3em; 
+}
+
+  h4 {
+    font-size: 24px;
+    position: relative;
+    text-align: center;
+  }
+  
+  #results-list {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+    text-align: center; 
+  }
+  
+  .skinType {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+  }
+  
+  #results-list span {
+    font-size: 30px;
+  }
+  
+  .skinImage {
+    height: 40px;
+    margin-right: 10px;
+    border: none;
+    background-color: none;
+  }
+  
+  #currentUV {
+    color: #a51212;
+    font-weight: bolder;
+    font-size: 28px;
+    text-align: center;
+  }
+  
+  #protectionPage {
+    padding: 20px;
+    margin-top: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #protectionPage span {
+    font-weight: bolder;
+    color: #a51212;
+  }
+  
+  #protectionHeadline span, #forecastHeadline span, #weatherPage span {
+    text-transform: uppercase;
+    color: #a51212;
+    display: block;
+  }
+  
+  .mainPic {
+    display: block;
+    margin: auto;
+    height: 120px;
+  }
+  
+  h3 {
+    text-align: center;
+    font-size: 28px;
+  }
+  
+  .results-protection {
+    font-size: 22px;
+    margin: 50px 20px;
+  }
+  
+  #forecastPage {
+    display: block;
+    padding: 20px;
+    margin-top: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #forecastList {
+    list-style: none;
+    padding: 0;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+  }
+  
+  .uvFC {
+    font-weight: bold;
+  }
+  
+  .red {
+    color: #ff0036e6;
+  }
+
+  #weatherPage {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #weatherPage span {
+    display: block;
+    color: #68b1e8;
+    text-transform: uppercase;
+  }
+
+  .mainPic {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 120px;
+  }
+  .weatherContainer {
+    width: 100%;
+    margin-bottom: 20px; /* Adds space below the weather list */
+}
+
+.temperatureContainer {
+    width: 100%;
+    margin-top: 20px; /* Adds space above the temperature display */
+    text-align: center;
+}
+
+  .temperatureDisplay {
+    display: inline-flex; /* Flexbox for horizontal alignment */
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center;
+  }
+  
+  #temp {
+
+    font-size: 34px; 
+    margin-left: 10px;
+  }
+
+  .results-value {
+    font-size: 50px;
+    margin: 5px;
+    text-align: center;
+    font-weight: bolder;
+    color: #a51212;
+  }
+
+  .weatherList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    width: 100%;
+  }
+  
+  .weatherLi {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+  }
+  
+  .weatherIcon {
+    height: 40px;
+    margin-right: 10px;
+  }
+
+  .buttonContainer{
+    text-align: center;
+    margin-top: 20px; /* Optional: space above the button */
+    width: 100%;
+  }
+  
+  @media screen and (min-width: 760px) /* Tablet */ {
+  
+    .startPage {
+      margin-top: -10px;
+    }
+  
+    label {
+      font-size: 25px;
+    }
+  
+    input {
+      height: 50px;
+    }
+  
+    nav {
+      justify-content: space-between;
+    }
+  
+    #navList {
+      font-size: 22px;
+    }
+  
+    .linkImage {
+      height: 30px;
+      position: relative;
+      top: 8px;
+      left: -3px;
+    }
+  
+    #sun {
+      height: 100px;
+    }
+  
+    .hamburger {
+      right: 26px;
+    }
+  
+    .results-description {
+      font-size: 25px;
+    }
+  
+    .inner {
+      height: 60px;
+    }
+  
+    .inner-green, .inner-yellow, .inner-orange, .inner-red, .inner-violet {
+      height: 80px;
+    }
+  
+    h4 {
+      font-size: 28px;
+    }
+  
+    #results-list {
+      font-size: 30px;
+    }
+  
+    #results-list span {
+      font-size: 30px;
+    }
+  
+    .skinImage {
+      height: 48px;
+    }
+  
+    .button {
+      display: inline-block;
+      font-size: 22px;
+      height: 50px;
+      width: 65%;
+      border-radius: 4px;
+      background-color: #fdd956;
+      border: 5px solid #fdd956;
+    }
+  
+    #currentUV {
+      font-size: 26px;
+    }
+  
+    .weatherList {
+      justify-content: space-between;
+      display: flex;
+    }
+  
+    .weatherIcon {
+      height: 60px;
+      margin-bottom: 15px;
+    }
+  
+    .weatherLi {
+      flex-wrap: wrap;
+    }
+  }
+  
+  @media screen and (min-width: 980px) /* Desktop */ {
+  
+    .startPage {
+      margin-top: -40px;
+    }
+  
+    #startImage {
+      height: 150px;
+    }
+  
+    h1 {
+      font-size: 40px;
+    }
+  
+    h3 {
+      font-size: 40px;
+    }
+  
+    nav {
+      height: auto;
+    }
+  
+    #navList {
+      display: flex !important; 
+      width: 89%;
+      justify-content: space-between;
+      font-size: 26px;
+    }
+  
+    #navList li {
+      padding: 0;
+    }
+  
+    #sun, #hamburger {
+      display: none;
+    }
+  
+    .results-protection {
+      font-size: 30px;
+    }
+  
+    form {
+      width: 65%;
+    }
+  
+    label {
+      font-size: 24px;
+    }
+  
+    input {
+      font-size: 20px;
+      height: 50px;
+    }
+  
+    #logo {
+      height: 105px;
+    }
+  
+    .linkImage {
+      height: 44px;
+      position: relative;
+      top: 12px;
+      left: -3px;
+    }
+  
+    #linkList {
+      font-size: 22px;
+    }
+  
+    h2 {
+      font-size: 38px;
+    }
+  
+    .uvButton {
+      margin-bottom: 60px;
+    }
+  
+    .results-value {
+      font-size: 45px;
+      margin: 20px;
+    }
+  
+    .results-description {
+      font-size: 24px;
+    }
+  
+    .color-bar {
+      margin: 30px 0 20px;
+    }
+  
+    .inner {
+      height: 100px;
+    }
+  
+    .inner-green, .inner-yellow, .inner-orange, .inner-red, .inner-violet {
+      height: 130px;
+    }
+  
+    h4 {
+      font-size: 32px;
+    }
+  
+    #results-list {
+      width: 100%;
+    font-size: 28px;
+    margin-bottom: 35px;
+    margin-top: 1px;
+    padding-left: 15px;
+    }
+  
+    #results-list span {
+      font-size: 30px;
+    }
+  
+    .skinType {
+      margin-left: 258px;
+    }
+  
+    .skinImage {
+      height: 61px;
+      margin-right: 18px;
+    }
+  
+    .button {
+      font-size: 24px;
+      height: 60px;
+      width: 65%;
+    }
+  
+    #forecastList {
+      font-size: 32px;
+      line-height: 44px;
+    }
+  
+    .temperatureDisplay {
+      display: block;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .weatherList {
+      font-size: 30px;
+      justify-content: space-around;
+    }
+  
+    .weatherIcon {
+      height: 65px;
+    }
+  }
+  
