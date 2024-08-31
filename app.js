@@ -69,6 +69,7 @@ function uvRestart(){
     $('#restartButton').click(function(event){
         $('main').empty();
         buildStartPage();
+        location.reload();
         watchForm();
     });
 }
@@ -210,7 +211,7 @@ if (uvIndex >= 11) {
                     <p class="uv-index-value">${uvIndex}</p>
                 </div>
             </div>
-            <h3 class="resultsDesc">VIOLET. It's bad. You WILL burn</h3>
+            <h3 class="resultsDesc">extreme! better stay inside!</h3>
             ${exposureTime}`);
 } else if (uvIndex >= 8) {
     $('main').append(`
@@ -229,7 +230,7 @@ if (uvIndex >= 11) {
                     <div class="uv-index-text">The current UV index is</div>
                     <p class="uv-index-value">${uvIndex}</p>
                 </div>
-            <h3 class="resultsDesc">RED. Better safe than sorry. Stay in!</h3>
+            <h3 class="resultsDesc">very high! better safe than sorry. stay in!</h3>
             </div>
             ${exposureTime}`);
 } else if (uvIndex >= 6) {
@@ -250,7 +251,7 @@ if (uvIndex >= 11) {
                     <p class="uv-index-value">${uvIndex}</p>
                 </div>
             </div>
-            <h3 class="resultsDesc">ORANGE. Put on your sunscreen and have fun outside</h3>
+            <h3 class="resultsDesc">high! put on your sunscreen and have fun outside</h3>
             ${exposureTime}`);
 } else if (uvIndex >= 3) {
     $('main').append(`
@@ -270,7 +271,7 @@ if (uvIndex >= 11) {
                     <p class="uv-index-value">${uvIndex}</p>
                 </div>
             </div>
-            <h3 class="resultsDesc">YELLOW. Caution advised.</h3>
+            <h3 class="resultsDesc">moderate! caution advised.</h3>
             ${exposureTime}`);
 } else {
     $('main').append(`
@@ -290,7 +291,7 @@ if (uvIndex >= 11) {
                     <p class="uv-index-value">${uvIndex}</p>
                 </div>
             </div>
-            <h3 class="resultsDesc">GREEN. You're safe. Enjoy the outdoors!</h3>
+            <h3 class="resultsDesc">low! you're safe. enjoy the outdoors!</h3>
             ${exposureTime}`);
 }
 
