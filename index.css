@@ -15,6 +15,8 @@
     color: #a51212; /* Set the color to green */
     font-size: 36px; /* Set the font size */
     margin: 50px 0;
+    border: #ffffe0;
+    background-color: #ffffe0;
     }
 
     nav {
@@ -42,6 +44,8 @@
         margin: 0px;
         padding: 12px 12px 12px 12px;
         font-size: 26px;
+        border: #ffffe0;
+      background-color: #ffffe0;
       }
       
       #navList li {
@@ -309,7 +313,7 @@ h2 {
 
 .uv-index-text {
   left: 19.5%;
-    top: 70%; /* Adjust the vertical position as needed */
+    top: 60%; /* Adjust the vertical position as needed */
     font-family: 'Karla', sans-serif;
     font-weight: 600;
     font-size: 2em; /* Adjust font size as needed */
@@ -318,7 +322,7 @@ h2 {
 
 .uv-index-value {
   left: 20%;
-    top: 70%; /* Position this slightly below the text */
+    top: 60%; /* Position this slightly below the text */
     font-family: 'Karla', sans-serif;
     font-weight: bold;
     font-size: 2.3em; 
@@ -612,7 +616,7 @@ h2 {
     }
   
     #navList {
-      display: flex !important; 
+      display: flex; 
       width: 89%;
       justify-content: space-between;
       font-size: 26px;
